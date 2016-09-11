@@ -1,0 +1,97 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <title>Choose Town</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'csspage2/bootstrap.min.css' %}" rel="stylesheet">
+	<link href = "{% static 'css/style.css' %}" rel="stylesheet">
+	
+    <!-- Custom CSS -->
+    <link href="{% static 'csspage2/1-col-portfolio.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<div id="header" class="header col-xs-12 col-sm-12 ">
+			<div id="logo-wrapper">
+				<div style="container">
+						
+					<!-- Logo -->
+						<div id="logo">
+							<p><a href="#">Let's Eat!</a></p>
+						</div>
+					
+				</div>
+			</div>
+	</div>
+
+    <!-- Page Content -->
+        <!-- Page Heading -->
+			<div id="banner1">
+				<img src = "{% static 'images/pizza-stock.jpg' %}" id = "pizza" style="max-width:100%;" />
+				<br><br>
+				<form action = "/choose_restaurant/" method = "get">
+				<div class = "row" style="width:1000px; margin:0 auto; background:#333">
+				<div class = "col-md-9" style = "background:#333">
+				<input type = "text" name = "search" placeholder = 	"Search" id = "search"></div>
+				<div class = "col-md-3" style = "background:#333">
+				<input type = "button" class = "button" name = "GO!"></input></div></form>
+				</div><br>
+				{% if error %}
+				<p>Please enter a valid search term</p>
+				{% endif %}
+				<br>
+            </div>
+			<p align="center" class="intro" >What do you want to eat today?</p><br>
+			<!-- Featured -->
+			<div class="container">
+			{% if food_list %}
+				
+			<div class="row">
+				{% for f in food_list %}
+					<div class="row" style="width:800px; margin:0 auto;">
+						<div class="col-md-8">
+							<a href = "{% url 'restaurants:choose_town' f.id %}">
+							<img class="img-responsive" src="{{ f.picture.url }}" alt="" style="width:400px;height:228px;"></a>
+							<br><br>
+						</div>
+						<div class="col-md-4">
+							<h1>{{ f.name }}</h1><br>
+						</div>
+					</div>
+				{% endfor %}
+					</div>
+			{% endif %}
+			<!-- /Featured -->
+			
+			</div>
+
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
