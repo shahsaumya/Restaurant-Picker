@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Restaurant picker</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<link href="{% static 'csspage2/bootstrap.min.css' %}" rel="stylesheet">
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-panels.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'css/skel-noscript.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-desktop.css' %}" />
+	</head>
+	<body class="homepage">
+
+	<!-- Header -->
+		<div id="header">
+			<div id="logo-wrapper">
+				<div class="container">
+						
+					<!-- Logo -->
+						<div id="logo">
+							<h1>Let's Eat!</h1>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+			
+	<!-- Header -->
+		
+	<!-- Banner -->
+		<div id="banner1">
+			<img src = "{% static 'images/pizza-stock.jpg' %}" id = "pizza"/>
+			<input type = "text" name = "search" placeholder = "Search" id = "search">
+			<br><br><br><br><br>
+		</div>
+	<!-- /Banner -->
+
+	<!-- Main -->
+		<div id="main">
+		<p align="center" class="intro" >What do you want to eat today?</p>
+			<!-- Featured -->
+			<div class="container">
+			{% if food_list %}
+				
+			<div class="row">
+				{% for f in food_list %}
+					<div class="row">
+						<div class="col-md-7">
+							<a href = "{% url 'restaurants:choose_town' f.id %}">
+							<img class="img-responsive" src="{{ f.picture.url }}" alt=""></a>
+						</div>
+						<div class="col-md-5">
+							<h1>{{ f.name }}</h1><br>
+						</div>
+					</div>
+				{% endfor %}
+					</div>
+			{% endif %}
+			<!-- /Featured -->
+			
+			</div>
+			<!-- /Main Content -->
+			
+		</div>
+	<!-- /Main -->
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<section>
+				</section>
+			</div>
+		</div>
+
+	</body>
+</html>
