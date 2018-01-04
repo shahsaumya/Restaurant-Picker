@@ -9,11 +9,11 @@ The web app also displayes results of the given restaurants such as contact numb
 - **Google Places API Integration**
 
 ## Screenshots
-![### Choose Cuisine](https://i.imgur.com/2DQAPw0)
-[https://i.imgur.com/oRNW1B1]
+![Choose Cuisine](https://i.imgur.com/2DQAPw0.png)
+[https://i.imgur.com/oRNW1B1.png]
 
-![### Choose Town](https://i.imgur.com/dmpYShS)
+![Choose Town](https://i.imgur.com/dmpYShS.png)
 
-![### Choose Restaurant](https://i.imgur.com/15D5cEx)
+![Choose Restaurant](https://i.imgur.com/15D5cEx.png)
 
-![### Restaurant Details](https://i.imgur.com/1Igaj8D)
+![Restaurant Details](https://i.imgur.com/1Igaj8D.png)
