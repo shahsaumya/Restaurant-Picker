@@ -12,7 +12,7 @@ The web app also displayes results of the given restaurants such as contact numb
 ![Choose Cuisine](https://i.imgur.com/2DQAPw0.png)
 
 
-![Choose Cuisine (2)][https://i.imgur.com/oRNW1B1.png]
+![Choose Cuisine (2)](https://i.imgur.com/oRNW1B1.png)
 
 
 ![Choose Town](https://i.imgur.com/dmpYShS.png)
