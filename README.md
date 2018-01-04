@@ -10,9 +10,10 @@ The web app also displayes results of the given restaurants such as contact numb
 
 ## Screenshots
 ![### Choose Cuisine](https://i.imgur.com/2DQAPw0)
+[https://i.imgur.com/oRNW1B1]
 
-![### Choose Town](https://i.imgur.com/oRNW1B1)
+![### Choose Town](https://i.imgur.com/dmpYShS)
 
-![### Choose Restaurant](https://i.imgur.com/dmpYShS)
+![### Choose Restaurant](https://i.imgur.com/15D5cEx)
 
-![### Restaurant Details](https://i.imgur.com/15D5cEx)
+![### Restaurant Details](https://i.imgur.com/1Igaj8D)
